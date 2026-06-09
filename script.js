@@ -9,6 +9,13 @@ if (menuToggle && mobileMenu) {
   });
 }
 
+const videoWrapper = document.getElementById('videoWrapper');
+if (videoWrapper) {
+  videoWrapper.addEventListener('click', () => {
+    videoWrapper.innerHTML = '<iframe src="https://www.youtube.com/embed/MhEKVpdMUmU?start=5&autoplay=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+  });
+}
+
 if (quoteForm) {
   quoteForm.addEventListener('submit', event => {
     event.preventDefault();

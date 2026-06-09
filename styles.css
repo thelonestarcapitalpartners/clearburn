@@ -649,6 +649,55 @@ section {
   margin-bottom: 0.6rem;
 }
 
+/* ── Video section ───────────────────────────────── */
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #000;
+  cursor: pointer;
+}
+
+.video-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.video-wrapper:hover .video-thumb {
+  opacity: 0.8;
+}
+
+.video-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.2s ease;
+  filter: drop-shadow(0 4px 16px rgba(0,0,0,0.5));
+}
+
+.video-wrapper:hover .video-play-btn {
+  transform: translate(-50%, -50%) scale(1.12);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 /* ── Footer ──────────────────────────────────────── */
 
 .site-footer {
